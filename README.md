@@ -13,7 +13,7 @@ This API can be accessed by requesting a HTTP POST method to URL http://Messagin
 Steps to build:
 1) Load the project from this repository into Eclipse
 2) Build war file
-File->Export->Web->WAR file-><select project and destination path>->Finish
+File->Export->Web->WAR file->select project and destination path->Finish
 3) Copy the war file generated at destination path to Web server(e.g. Tomcat)
 4) Test the RESt APIs with Postman client by requesting HTTP POST method to <localhost:8080>/inbound/sms/ and <localhost:8080>/outbound/sms/
 
