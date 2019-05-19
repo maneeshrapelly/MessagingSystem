@@ -8,18 +8,24 @@ API /inbound/sms/:
 This API can be accesses by requesting a HTTP POST method to URL http://MessaginApplication.us-east-2.elasticbeanstalk.com/inbound/sms/
 
 API /outbound/sms/:
-This APi can be accessed by requesting a HTTP POST method to URL http://MessaginApplication.us-east-2.elasticbeanstalk.com/outbound/sms/
+This API can be accessed by requesting a HTTP POST method to URL http://MessaginApplication.us-east-2.elasticbeanstalk.com/outbound/sms/
 
+Steps to build:
+1) Load the project from this repository into Eclipse
+2) Build war file
+File->Export->Web->WAR file-><select project and destination path>->Finish
+3) Copy the war file generated at destination path to Web server(e.g. Tomcat)
+4) Test the RESt APIs with Postman client by requesting HTTP POST method to <localhost:8080>/inbound/sms/ and <localhost:8080>/outbound/sms/
 
-Steps to test the RESt service:
-1) Install a Postman client application to test REST APi from this application
+Steps to test the RESt service hosted in AWS:
+1) Install Postman client application to test REST API. Follow below steps in Postman client
 2) Select HTTP method as "POST" and URL as one of the API URLs mentioned above
 3) Select authentication type as "Basic Authentication" and provide username and password fields from accounts table from postgres database
 4) Write HTTP body in json format with from, to and text fields:
 e.g: {"from": "441224980094",
 "to":"441224459571",
 "text": "HELLO"}
-5) Verify the API returned response is in expected format
+5) Verify the API returned response is expected output
 6) Sample HTTP request from Postman client looks like below, json text is the body part:
 POST /outbound/sms/ HTTP/1.1
 Host: MessaginApplication.us-east-2.elasticbeanstalk.com
