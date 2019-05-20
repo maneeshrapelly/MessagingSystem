@@ -15,7 +15,7 @@ Steps to build:
 2) Build war file
 File->Export->Web->WAR file->select project and destination path->Finish
 3) Copy the war file generated at destination path to Web server(e.g. Tomcat)
-4) Test the RESt APIs with Postman client by requesting HTTP POST method to <localhost:8080>/inbound/sms/ and <localhost:8080>/outbound/sms/
+4) Test the RESt APIs with Postman client by requesting HTTP POST method to <localhost:8080>/<project-name>/inbound/sms/ and <localhost:8080>/<project-name>/outbound/sms/
 
 Steps to test the RESt service hosted in AWS:
 1) Install Postman client application to test REST API. Follow below steps in Postman client
